@@ -1,0 +1,11 @@
+[Unit]
+Description=My Flask learning application
+
+[Service]
+User=somto
+WorkingDirectory=/home/somto/linux-services-lab
+ExecStart=/home/somto/linux-services-lab/venv/bin/python /home/somto/linux-services-lab/my_app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
