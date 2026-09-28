@@ -1,0 +1,13 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Node.js
+node_modules/
+
+# Java/Tomcat generated deployment artifacts
+*.war
+
+# Logs
+*.log
