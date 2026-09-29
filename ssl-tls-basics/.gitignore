@@ -1,0 +1,24 @@
+# ==========================================
+# SSL/TLS Lab - Sensitive Generated Files
+# ==========================================
+
+# Symmetric encryption lab plaintext
+secret.txt
+decrypted.txt
+
+# Asymmetric encryption lab plaintext
+asymmetric-lab/message.txt
+asymmetric-lab/recovered.txt
+
+# RSA private key
+asymmetric-lab/private_key.pem
+
+# SSH private key
+asymmetric-lab/ssh-lab/lab_ssh_key
+
+# TLS server private key
+certificate-lab/server.key
+
+# Generated encrypted lab files
+secret.enc
+asymmetric-lab/message.enc
