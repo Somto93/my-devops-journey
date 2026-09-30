@@ -1,0 +1,9 @@
+Fruits:
+  - Banana:
+      Calories: 105
+      Fat: 0.4
+      Carbs: 27
+  - Grape:
+      Calories: 62
+      Fat: 0.3
+      Carbs: 16
