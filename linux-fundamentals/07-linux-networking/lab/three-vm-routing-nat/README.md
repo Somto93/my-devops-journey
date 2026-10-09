@@ -50,6 +50,28 @@ The router also uses:
 
 See [Network Topology](topology.md) for the complete architecture.
 
+
+### Network Topology Diagram
+
+```mermaid
+flowchart TB
+    INTERNET["Internet"]
+    NAT["VirtualBox NAT Gateway<br/>10.0.5.2"]
+    ROUTER["lab-router<br/>CentOS Stream 10<br/>IPv4 Forwarding + firewalld"]
+    S1["lab-server-1<br/>192.168.10.10/24"]
+    S2["lab-server-2<br/>192.168.20.10/24"]
+    MGMT["Host-only Management Network<br/>192.168.56.0/24<br/>Windows: 192.168.56.1"]
+
+    INTERNET --- NAT
+    NAT ---|"enp0s10: 10.0.5.15/24<br/>external zone, masquerade"| ROUTER
+    ROUTER ---|"enp0s3: 192.168.10.1/24<br/>lab-net-a, internal zone"| S1
+    ROUTER ---|"enp0s8: 192.168.20.1/24<br/>lab-net-b, internal zone"| S2
+    ROUTER -.-|"enp0s9: 192.168.56.30/24"| MGMT
+    MGMT -.-|"192.168.56.10/24"| S1
+    MGMT -.-|"192.168.56.20/24"| S2
+```
+
+
 ## Implementation Summary
 
 ### 1. Network Configuration
