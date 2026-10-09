@@ -108,3 +108,22 @@ Ports and Application Binding
 Network Troubleshooting
 
 This repository documents my continued hands-on learning as I build practical Linux and DevOps skills.
+
+## Hands-on Networking Projects
+
+### Three-VM Linux Routing, NAT and Firewall Lab
+
+Built a virtual networking environment using three CentOS Stream 10 virtual machines and Oracle VirtualBox.
+
+The project demonstrates:
+
+- Routing between two isolated Linux subnets.
+- IPv4 forwarding and default gateway configuration.
+- NAT masquerading using nftables and firewalld.
+- Connection tracking and packet-flow investigation.
+- Persistent NetworkManager and firewall configuration.
+- Network troubleshooting and post-reboot verification.
+
+**[View the complete project documentation](lab/three-vm-routing-nat/README.md)**
+
+The project includes network topology, implementation details, testing results, troubleshooting exercises and lessons learned.
